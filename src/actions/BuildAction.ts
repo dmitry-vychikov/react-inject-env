@@ -42,7 +42,7 @@ export class BuildAction extends CommandLineAction {
     const filteredEnv = Obj.omit(env, this.bypassEnvVar)
     console.info('Replacing the following variables with placeholders', Object.keys(filteredEnv))
 
-    const command = `${formatEnvToCliString(filteredEnv)} ${this.userCommand}`
+    const command = `npx cross-env ${formatEnvToCliString(filteredEnv)} ${this.userCommand}`
     console.info('Executing script', `'${this.userCommand}'`)
     shell.exec(command)
   }
