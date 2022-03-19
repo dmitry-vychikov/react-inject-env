@@ -7,7 +7,7 @@
   "repository": "https://github.com/dmitry-vychikov/react-inject-env/",
   "main": "dist/index.js",
   "bin": {
-    "react-inject-env": "dist/cli.js"
+    "react-inject-env-enh": "dist/cli.js"
   },
   "scripts": {
     "prepublish": "tsc --incremental false",
