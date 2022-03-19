@@ -2,6 +2,8 @@
 
 `react-inject-env` is a tool that allows you to inject your environment variables after building the static files, allowing you to deploy the same build to multiple environments quickly.
 
+Contains fix for building on Windows.
+
 ## Usage
 
 [Sample project](./sample/v2/README.md)
