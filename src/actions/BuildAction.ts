@@ -44,7 +44,11 @@ export class BuildAction extends CommandLineAction {
 
     const command = `npx cross-env ${formatEnvToCliString(filteredEnv)} ${this.userCommand}`
     console.info('Executing script', `'${this.userCommand}'`)
-    shell.exec(command)
+    shell.exec(command, (code, output) => {
+      if (code === 0) return
+      shell.echo(shell.echo(`User command exited with code ${code}` + (output ? `:${output}` : ``)))
+      shell.exit(1)
+    })
   }
 
   protected onDefineParameters(): void {
