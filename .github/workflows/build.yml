@@ -48,7 +48,7 @@ jobs:
 
   publish:
     if: contains(github.ref, 'refs/heads/master')
-    needs: [compile, test]
+    needs: [compile]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
