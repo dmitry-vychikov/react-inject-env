@@ -1,4 +1,4 @@
-rm -r tests/output
+rm -rf tests/output || true
 mkdir -p tests/output
 
 echo REACT_APP_PROCESS_ENV: "$REACT_APP_PROCESS_ENV" >> tests/output/test.txt
